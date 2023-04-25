@@ -14,23 +14,13 @@ public class GameManager{
         return sChanger;
     }
 
-    public void setsChanger(SceneChanger sChanger) {
-        this.sChanger = sChanger;
-    }
-
     private BattleManager bm = new BattleManager(this);
-
     public BattleManager getsbm() {
         return bm;
     }
-
-    public void setsBattleManager(BattleManager bm) {
-        this.bm = bm;
-    }
-
-    public Giant giant =  new Giant();
-    public Mutant mutant = new Mutant();
-    public Beast beast = new Beast();
+    public Monster giant =  new Giant();
+    public Monster mutant = new Mutant();
+    public Monster beast = new Beast();
     public Music music = new Music();
     public SE se = new SE();
     public Event01 ev1 = new Event01(this);

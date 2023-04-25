@@ -13,7 +13,6 @@ public class SE {
     public void setFile(URL name)
     {
         try{
-            //File file = new File(name);
             AudioInputStream sound = AudioSystem.getAudioInputStream(name);
             clip = AudioSystem.getClip();
             clip.open(sound);
@@ -28,16 +27,6 @@ public class SE {
     {
         clip.setFramePosition(0);
         clip.start();
-    }
-
-    public void loop(URL name)
-    {
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-    }
-
-    public void stop(URL name)
-    {
-        clip.stop();
     }
 
 }

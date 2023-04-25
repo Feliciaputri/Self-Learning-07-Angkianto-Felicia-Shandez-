@@ -7,11 +7,11 @@ public class Event01 {
     }
 
     public void lookHut(){
-        gm.ui.setMessageText("This is your house");
+        gm.ui.setMessageText("Your house is here");
     }
 
     public void talkHut(){
-        gm.ui.setMessageText("Who are you talking to?");
+        gm.ui.setMessageText("House can't talk to you");
     }
 
     public void restHut(){
@@ -51,7 +51,7 @@ public class Event01 {
             gm.ui.setMessageText("Guard : Don't go any further without a weapon!\nYou should check the barrels over there!");
             gm.playSE(gm.guard01);
         }else{
-            gm.ui.setMessageText("Guard : Go defeat the demon king monsters!");
+            gm.ui.setMessageText("Guard : Go defeat the monsters!");
             gm.playSE(gm.guard06);
         }
     }
@@ -60,13 +60,13 @@ public class Event01 {
         if(gm.player.getHasShield() == 0){
             if(gm.player.getHasSword() == 0){
                 if(gm.player.getPlayerLife() != 1){
-                    gm.ui.setMessageText("Guard : Hey don't be stupid\nThe guard hits you back");
+                    gm.ui.setMessageText("Guard : Hey don't hurt me!\nThe guard hits you back");
                     gm.playSE(gm.hitSound);
                     gm.playSE(gm.guard02);
                     gm.player.setPlayerLife(gm.player.getPlayerLife() - 1);
                 }
                 else if(gm.player.getPlayerLife() ==1){
-                    gm.ui.setMessageText("Guard : What a fool");
+                    gm.ui.setMessageText("Guard : You shouldn't have mess with me!");
                     gm.playSE(gm.guard03);
                     gm.playSE(gm.hitSound);
                     gm.player.setPlayerLife(gm.player.getPlayerLife() - 1);
@@ -75,7 +75,7 @@ public class Event01 {
             }
             else if(gm.player.getHasSword()==1){
                 gm.playSE(gm.deathSound);
-                gm.ui.setMessageText("Guard : Oh, shi1!\nYou've defeated the Guard");
+                gm.ui.setMessageText("Guard : Oh, no!\nYou've defeated the Guard");
                 gm.ui.addMessageText("\nYou got shield\nYour resistance increases by 1");
                 gm.playSE(gm.guard04);
                 gm.playSE(gm.chestopen);
@@ -84,22 +84,22 @@ public class Event01 {
             gm.player.updatePlayerStatus();
         }
         else {
-            gm.ui.setMessageText("Guard : Just Leave me alone");
+            gm.ui.setMessageText("Guard : Do not bother me!");
             gm.playSE(gm.guard05);
         }
     }
 
-    public void lookChest(){
-        gm.ui.setMessageText("A chest is on the ground");
+    public void lookBarrel(){
+        gm.ui.setMessageText("A barrel is on the ground");
     }
 
-    public void talkChest(){
-        gm.ui.setMessageText("You talk to the chest but it says nothing");
+    public void talkBarrel(){
+        gm.ui.setMessageText("You talk to the barrel but it says nothing");
     }
 
-    public void searchChest(){
+    public void searchBarrel(){
         if(gm.player.getHasSword() == 0) {
-            gm.ui.setMessageText("You open the chest and find a sword!");
+            gm.ui.setMessageText("You open the barrel and find a sword!");
             gm.ui.addMessageText("\nYour strength increases by 3");
             gm.player.setHasSword(1);
             gm.playSE(gm.chestopen);

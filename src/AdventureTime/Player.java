@@ -120,10 +120,6 @@ public class Player {
         this.gm = gm;
     }
 
-    public void setDiff(String diff){
-        this.diff = diff;
-    }
-
     public void setPlayerDefaultStatus() {
         playerMaxLife = 5;
         playerLife = 3;
@@ -139,6 +135,15 @@ public class Player {
         shieldPower=0;
         bowPower = 0;
         defeatgiant = false;
+        defeatmutant = false;
+        defeatbeast = false;
+
+        gm.getsbm().resetMonsterLife(gm.giant);
+        gm.ui.changeimage(3,1,250,50,250,320,"AdventureTime/image/giant.png","Look","Talk","Attack","lookMonster","talkMonster","attackMonster");
+        gm.getsbm().resetMonsterLife(gm.mutant);
+        gm.ui.changeimage(5,1,250,50,250,320,"AdventureTime/image/mutant.png","Look","Talk","Attack","lookMonster2","talkMonster2","attackMonster2");
+        gm.getsbm().resetMonsterLife(gm.beast);
+        gm.ui.changeimage(7,1,250,40,250,320,"AdventureTime/image/beast.png","Look","Talk","Attack", "LookMonster3", "talkMonster3", "attackMonster3");
         updatePlayerStatus();
     }
 
@@ -210,7 +215,7 @@ public class Player {
         }
 
         if(hasBow == 1) {
-            gm.player.bowPower = 5;
+            gm.player.bowPower = 4;
             gm.ui.bowlabel.setVisible(true);
         }
 

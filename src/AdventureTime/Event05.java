@@ -22,19 +22,12 @@ public class Event05 {
             gm.ui.setMessageText("Monster: .......");
         }
         else {
-            gm.ui.setMessageText("Monster: DIE YOU FOOL!");
+            gm.ui.setMessageText("Monster: HOW DARE YOU ATTACK ME!");
             gm.playSE(gm.monster02);
         }
     }
 
-//    int attack = 1;
     public void attackMonster(String diff) {
-
-//        if(attack == 1){
-//            gm.currentMusic = gm.battleMusic;
-//            gm.playMusic(gm.currentMusic);
-//            attack++;
-//        }
         gm.ui.changeimage(5,1,150,40,350,350,"AdventureTime/image/mutantatk.png","Look","Talk","Attack","lookMonster2","talkMonster2","attackMonster2");
 
         if(gm.player.isDefeatmutant() == true) {

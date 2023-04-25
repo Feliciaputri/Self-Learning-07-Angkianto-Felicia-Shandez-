@@ -12,9 +12,6 @@ public class Music {
 
     public void setFile(URL name)
     {
-//        AudioInputStream sound = AudioSystem.getAudioInputStream(name);
-//        clip = AudioSystem.getClip();
-//        clip.open(sound);
         try{
             AudioInputStream sound = AudioSystem.getAudioInputStream(name);
             clip = AudioSystem.getClip();
@@ -27,7 +24,6 @@ public class Music {
 
     public void play(URL name)
     {
-//		fc.setValue(volume);
         clip.setFramePosition(0);
         clip.start();
     }

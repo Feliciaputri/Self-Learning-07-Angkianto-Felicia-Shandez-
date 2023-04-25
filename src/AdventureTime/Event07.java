@@ -21,22 +21,15 @@ public class Event07 {
             gm.ui.setMessageText("Monster: .......");
         }
         else {
-            gm.ui.setMessageText("Monster: DIE YOU FOOL!");
+            gm.ui.setMessageText("Monster: HOW DARE YOU ATTACK ME!!");
             gm.playSE(gm.monster03);
         }
     }
 
-//    int attack = 1;
     public void attackMonster(String diff) {
-//        if(attack == 1){
-//            gm.currentMusic = gm.battleMusic;
-//            gm.playMusic(gm.currentMusic);
-//            attack++;
-//        }
         gm.ui.changeimage(7,1,250,40,330,320,"AdventureTime/image/beastatk.png","Look","Talk","Attack","lookMonster3","talkMonster3","attackMonster3");
 
         if(gm.player.isDefeatbeast() == true) {
-//            gm.stopMusic(gm.currentMusic);
             gm.ui.changeimage(7,1,250,40,300,300,"AdventureTime/image/grave.png","Look","Talk","Attack","lookMonster3","talkMonster3","attackMonster3");
             gm.ui.setMessageText("The Beast is already dead...");
         }

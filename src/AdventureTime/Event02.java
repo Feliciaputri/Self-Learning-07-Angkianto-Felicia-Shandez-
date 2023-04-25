@@ -15,7 +15,7 @@ public class Event02 {
     }
 
     public void talkCave() {
-        gm.ui.setMessageText("You hear the echo of your voice.");
+        gm.ui.setMessageText("You hear something from inside. But you don't know what is that");
     }
 
     public void enterCave() {
@@ -28,11 +28,11 @@ public class Event02 {
     }
 
     public void lookRoot() {
-        gm.ui.setMessageText("There's something at the tree");
+        gm.ui.setMessageText("There's something here");
     }
 
     public void talkRoot() {
-        gm.ui.setMessageText("They say plant grows well if you talk to but this tree doesn't look like it needs encourgament.");
+        gm.ui.setMessageText("Root : I don't want say anything with you.");
     }
 
     public void searchRoot() {

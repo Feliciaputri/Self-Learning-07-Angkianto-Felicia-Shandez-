@@ -46,10 +46,6 @@ public class SceneChanger {
         gm.stopMusic(gm.currentMusic);
         gm.currentMusic = gm.fieldMusic;
         gm.playMusic(gm.currentMusic);
-
-        gm.getsbm().resetMonsterLife(gm.giant);
-        gm.getsbm().resetMonsterLife(gm.mutant);
-        gm.getsbm().resetMonsterLife(gm.beast);
     }
     public void showScreen2(){
         gm.ui.getBgPanel()[1].setVisible(false);
@@ -172,13 +168,10 @@ public class SceneChanger {
     public void exitGameOverScreen(){
         gm.ui.getTitlelabel().setVisible(false);
         gm.ui.getRestartButton().setVisible(false);
-//        gm.bm.resetMonsterLife(gm.giant);
-//        gm.bm.resetMonsterLife(gm.mutant);
         gm.player.setPlayerDefaultStatus();
     }
 
     public void showEndScreen(int currentBgNum) {
-
         gm.ui.getBgPanel()[currentBgNum].setVisible(false);
         gm.ui.getTitlelabel().setVisible(true);
         gm.playSE(gm.awesome);
@@ -189,8 +182,5 @@ public class SceneChanger {
         gm.ui.changeimage(7,1,250,40,250,320,"AdventureTime/image/beast.png","Look","Talk","Attack", "LookMonster3", "talkMonster3", "attackMonster3");
         gm.ui.getTitlelabel().setText("Congratz!");
         gm.ui.setMessageText("You have completed the Awesome Quest III!\nThanks for playing!");
-//		gm.ui.getRestartButton().setVisible(true);
-
-//       gm.stopMusic(gm.fieldMusic);
     }
 }

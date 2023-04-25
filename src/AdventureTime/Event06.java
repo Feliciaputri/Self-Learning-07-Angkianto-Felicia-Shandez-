@@ -55,7 +55,7 @@ public class Event06 {
     public void digDirt() {
         if (gm.player.getHasBow() == 0) {
             gm.ui.setMessageText("You find an old but strong bow.\nIt could be useful in battle");
-            gm.ui.addMessageText("\nYour strength increases by 5");
+            gm.ui.addMessageText("\nYour strength increases by 4");
             gm.player.setHasBow(1);
             gm.playSE(gm.chestopen);
             gm.player.updatePlayerStatus();

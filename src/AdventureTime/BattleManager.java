@@ -53,19 +53,19 @@ public class BattleManager {
                 gm.ui.getRestartButton().setText("Click here to restart");
             }
 
-            if(monster == gm.beast && diff.equals("hard")){
-                gm.ui.setMessageText("Congratz\nYou've defeated the monster");
-                gm.getsChanger().showEndScreen(7);
-                gm.ui.getRestartButton().setVisible(true);
-                gm.ui.getRestartButton().setText("Click here to restart");
-            }
-
-            if(monster == gm.giant && diff.equals("medium") || diff.equals("hard")){
+            if(monster == gm.giant && (diff.equals("medium") || diff.equals("hard"))){
                 gm.ui.changeimage(3,1,250,40,300,300,"AdventureTime/image/grave.png","Look","Talk","Attack","lookMonster","talkMonster","attackMonster");
                 gm.ui.createArrowButton(3, 650, 150, 50, 50, "AdventureTime/image/rightArrow.png", "goScene4");
                 gm.ui.getBgPanel()[3].add(gm.ui.getBgLabel()[3]);
                 gm.playSE(gm.awesome);
                 gm.getsChanger().showScreen4();
+            }
+
+            if(monster == gm.beast && diff.equals("hard")){
+                gm.ui.setMessageText("Congratz\nYou've defeated the monster");
+                gm.getsChanger().showEndScreen(7);
+                gm.ui.getRestartButton().setVisible(true);
+                gm.ui.getRestartButton().setText("Click here to restart");
             }
 
             if(monster == gm.mutant && diff.equals("hard")){
@@ -102,7 +102,6 @@ public class BattleManager {
         gm.playSE(gm.hitSound);
     }
     public void win() {
-//        System.out.println("WIN!!!");
         gm.ui.addMessageText("\nYou have defeated the monster!\n");
 
         if(monster == gm.giant) {
@@ -118,7 +117,6 @@ public class BattleManager {
         }
     }
     public void lose() {
-//        System.out.println("LOSE!!!");
         gm.ui.addMessageText("You died!!");
         if(monster== gm.giant) {
             gm.getsChanger().showGameOverScreen(3);

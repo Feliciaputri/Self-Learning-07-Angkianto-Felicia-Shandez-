@@ -25,9 +25,9 @@ public class ActionHandler implements ActionListener {
             case "lookGuard" : gm.ev1.lookGuard(); break;
             case "talkGuard" : gm.ev1.talkGuard(); break;
             case "attackGuard" : gm.ev1.attackGuard(); break;
-            case "lookChest" : gm.ev1.lookChest(); break;
-            case "talkChest" : gm.ev1.talkChest(); break;
-            case "searchChest" : gm.ev1.searchChest(); break;
+            case "lookBarrel" : gm.ev1.lookBarrel(); break;
+            case "talkBarrel" : gm.ev1.talkBarrel(); break;
+            case "searchBarrel" : gm.ev1.searchBarrel(); break;
 
 
             case "lookCave" : gm.ev2.lookCave();break;

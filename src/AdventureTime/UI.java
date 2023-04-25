@@ -24,18 +24,10 @@ public class UI extends JFrame {
     public JPanel[] getBgPanel() {
         return bgPanel;
     }
-
-    public void setBgPanel(JPanel[] bgPanel) {
-        this.bgPanel = bgPanel;
-    }
     //bgLabel
     private JLabel bgLabel[] = new JLabel[10];
     public JLabel[] getBgLabel() {
         return bgLabel;
-    }
-
-    public void setBgLabel(JLabel[] bgLabel) {
-        this.bgLabel = bgLabel;
     }
 
     private JLabel objectLabel[][] = new JLabel[10][10];
@@ -78,19 +70,18 @@ public class UI extends JFrame {
 
     public void createMainField() {
         window = new JFrame();
-        window.setSize(800, 600);
+        window.setSize(830, 650);
         window.setDefaultCloseOperation(EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.BLACK);
         window.setLayout(null);
 
         messageText = new JTextArea("Let's start the game");
-        messageText.setBounds(50, 400, 700, 150);
+        messageText.setBounds(50, 400, 750, 200);
         messageText.setBackground(Color.black);
         messageText.setForeground(Color.white);
         messageText.setEditable(false);
         messageText.setLineWrap(true);
         messageText.setWrapStyleWord(true);
-//        message.setFont(new Font(b));
         messageText.setEditable(false);
         messageText.setLineWrap(true);
         messageText.setWrapStyleWord(true);
@@ -135,7 +126,7 @@ public class UI extends JFrame {
 
 
         inventoryPanel = new JPanel();
-        inventoryPanel.setBounds(590, 0, 200, 50);
+        inventoryPanel.setBounds(550, 0, 200, 50);
         inventoryPanel.setBackground(Color.BLACK);
         inventoryPanel.setLayout(new GridLayout(1, 4));
         window.add(inventoryPanel);
@@ -275,8 +266,6 @@ public class UI extends JFrame {
         menuItem[3].addActionListener(gm.aHandler);
         menuItem[3].setActionCommand(cmd3);
         popMenu.add(menuItem[3]);
-
-//        objectLabel[num][objnum] = JLabel[num][objnum];
         objectLabel[num][objnum].setBounds(x, y, width, height);
 
         objectIcon[num][objnum] = new ImageIcon(getClass().getClassLoader().getResource(imgname));
@@ -307,7 +296,6 @@ public class UI extends JFrame {
             public void mouseExited(MouseEvent e) {
             }
         });
-//        bgPanel[num].(objectLabel[num][objnum]);
 
     }
 
@@ -359,9 +347,9 @@ public class UI extends JFrame {
         createBackground(1, "AdventureTime/image/background.jpg");
         createObject(1, 1,400, 100, 200, 200, "AdventureTime/image/hut.png", "Look", "Talk", "Rest", "lookHut", "talkHut", "restHut");
         createObject(1, 2,100, 200, 100, 100, "AdventureTime/image/guard.png", "Look", "Talk", "Attack", "lookGuard", "talkGuard", "attackGuard");
-        createObject(1, 3,270, 210, 60, 85, "AdventureTime/image/barrel.png", "Look", "Talk", "Open", "lookChest", "talkChest", "searchChest");
-
+        createObject(1, 3,270, 210, 60, 85, "AdventureTime/image/barrel.png", "Look", "Talk", "Open", "lookBarrel", "talkBarrel", "searchBarrel");
         createArrowButton(1, 650, 150, 50, 50, "AdventureTime/image/rightarrow.png", "goScene2");
+
         bgPanel[1].add(bgLabel[1]);
 
         //Scene 2 (cave)
