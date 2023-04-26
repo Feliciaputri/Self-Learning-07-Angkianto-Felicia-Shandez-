@@ -181,6 +181,6 @@ public class SceneChanger {
         gm.ui.changeimage(5,1,250,50,250,320,"AdventureTime/image/mutant.png","Look","Talk","Attack","lookMonster2","talkMonster2","attackMonster2");
         gm.ui.changeimage(7,1,250,40,250,320,"AdventureTime/image/beast.png","Look","Talk","Attack", "LookMonster3", "talkMonster3", "attackMonster3");
         gm.ui.getTitlelabel().setText("Congratz!");
-        gm.ui.setMessageText("You have completed the Awesome Quest III!\nThanks for playing!");
+        gm.ui.setMessageText("You have completed the Adventure Time!\nThanks for playing!");
     }
 }
